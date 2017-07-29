@@ -1,0 +1,29 @@
+{% extends 'core/base.html' %}
+{% load static %}
+{% load crispy_forms_tags %}
+
+{% block title %}Pysimplelife - Login{% endblock title %}
+
+{% block content %}
+<h2 class='text-align-center'><strong>Login on Pysimplelife</strong></h2>
+  <div class='col-sm-6 col-sm-offset-3'>
+
+    <div class="panel-body">
+      <form method="post" action=".">
+        {{ form|crispy }}
+        {% csrf_token %}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <button type="submit" class='btn btn-block btn-default'><strong>Login</strong></button>
+      </form>
+    </div>
+  </div>
+      <br />
+       <div class='row'>
+        <div class='col-sm-6 col-sm-offset-3'>
+            <br/>
+            <p><a href="{% url 'core:password_reset' %}">I forgot my password</a></p>
+            <p><a href="{% url 'core:register' %}">I do not have an account yet</a></p>
+        </div>
+       </div>
+
+{% endblock content %}

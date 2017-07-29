@@ -1,0 +1,20 @@
+{% extends 'core/base.html' %}
+
+{% block title %}Email confirmation - Pysimplelife{% endblock title %}
+
+{% block content %}
+<h2 class='text-align-center'><strong>Confirmed Email</strong></h2>
+    <div class="panel-body">
+       <h3>Thank you for confirming your email address.</h3>
+    <br/>
+      {% if request.user.is_authenticated %}
+          <p class="lead">
+              <a href="{% url 'core:login_redirect' %}" class="btn btn-lg btn-default">Go home</a>
+          </p>
+      {% else %}
+          <p class="lead">
+              <a href="{% url 'core:login' %}" class="btn btn-lg btn-default">Login</a>
+          </p>
+      {% endif %}
+    </div>
+{% endblock content %}

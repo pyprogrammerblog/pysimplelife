@@ -1,0 +1,20 @@
+<tfoot>
+<tr>
+  <td><b>Totaal: {{ page_obj.paginator.count }}</b> - {{ page_obj.paginator.per_page }} per pagina</td>
+  <td colspan="{{ colspan }}" align="right">
+    <span class="step-links">
+      {% if page_obj.has_previous %}
+        <a href="?page=1"><i class="fa fa-fast-backward"></i></a>
+        <a href="?page={{ page_obj.previous_page_number }}"><i class="fa fa-step-backward"></i></a>
+      {% endif %}
+      <span class="current">
+        pagina {{ page_obj.number }} van {{ page_obj.paginator.num_pages }}
+      </span>
+      {% if page_obj.has_next %}
+        <a href="?page={{ page_obj.next_page_number }}"><i class="fa fa-step-forward"></i></a>
+        <a href="?page=last"><i class="fa fa-fast-forward"></i></a>
+      {% endif %}
+    </span>
+  </td>
+</tr>
+</tfoot>

@@ -1,0 +1,15 @@
+{% extends 'core/base.html' %}
+{% load crispy_forms_tags %}
+
+{% block title %}Pysimplelife - Register{% endblock title %}
+
+{% block content %}
+
+<h2><strong>Sign up now on Pysimplelife</strong></h2><br/>
+    <form method="post" action=".">
+      {% csrf_token %}
+      {{ form|crispy }}
+      <input class='btn btn-block btn-default' type="submit" value="Register" style="font-weight: bold;" />
+    </form>
+
+{% endblock content %}

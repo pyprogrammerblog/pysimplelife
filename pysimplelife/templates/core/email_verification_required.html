@@ -1,0 +1,14 @@
+{% extends 'core/base.html' %}
+
+
+{% block title %}Email confirm required - Pysimplelife{% endblock title %}
+
+{% block content %}
+<h2 class='text-align-center'><strong>Email confirmation required</strong></h2>
+    <div class="panel-body">
+        <h3>You must confirm your email address before you can enter. You have received an email when you registered.</h3>
+        <h3>Click on the link in the email to confirm your email address.</h3>
+        <br>
+        <h3>If you want receive a link again, please click <a href="{% url 'core:logout' %}">here</a></h3>
+    </div>
+{% endblock content %}

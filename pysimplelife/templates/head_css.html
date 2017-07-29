@@ -1,0 +1,54 @@
+{% load static %}
+{% load crispy_forms_tags %}
+
+    <link href="{% static 'admin/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/css/sb-admin.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/css/plugins/morris.css' %}" rel="stylesheet">
+    <link href="{% static 'admin/font-awesome/css/font-awesome.min.css' %}" rel="stylesheet" type="text/css">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <style>
+        .navbar-inverse {
+            background-color: darkslategray !important;
+            border-color: darkslategray !important;
+        }
+        .navbar-inverse .navbar-toggle {
+             border-color: antiquewhite;
+        }
+        .collapse {
+            background-color: darkslategray !important;
+            border-color: darkslategray !important;
+            color: antiquewhite;
+        }
+        .side-nav>li>ul>a:hover {
+            color: antiquewhite !important;
+            background-color: darkslategray !important;
+         }
+        .navbar-toggle>a:hover {
+            color: #1b6d85;
+            background-color: #1b6d85;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+            color: antiquewhite !important;
+        }
+        .side-nav>li>ul>li>a {
+            display: block;
+            padding: 10px 15px 10px 38px;
+            text-decoration: none;
+            color: antiquewhite;
+            background-color: darkslategray;
+        }
+        .navbar-inverse .navbar-nav>li>a {
+            color: antiquewhite; !important;
+        }
+        .navbar-inverse .navbar-nav>li>a:hover {
+            background-color: #1b6d85; !important;
+        }
+        .navbar-inverse .navbar-nav>li>a>li>a:hover {
+            background-color: #1b6d85; !important;
+        }
+    </style>
