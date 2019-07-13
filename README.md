@@ -1,7 +1,5 @@
 # pysimplelife
 
-# mysite
-
 [PySimplelife.com](https://pisimplelife.com)
 
 ## Installation
